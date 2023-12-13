@@ -111,6 +111,8 @@ for index, row in df.iterrows():
                     # Upload the processed file to the destination S3 bucket with the same directory tree structure
                     destination_key = os.path.join(relative_path, file)
                     s3.put_object(Body=uncompressed_data, Bucket=destination_bucket_name, Key=destination_key)
+                    timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    print(timestamp, ':', file, 'transferred')
     shutil.rmtree(output_directory)
     os.makedirs(output_directory)
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
