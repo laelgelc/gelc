@@ -1,2 +1,2 @@
-# gelc
-Generic repository for GELC projects
+# awsemr
+Amazon EMR for GELC projects
