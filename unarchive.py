@@ -16,16 +16,6 @@ load_dotenv()  # This line brings all environment variables from '.env' into 'os
 
 # Define the name of the CSV file containing the list of S3 keys
 #key_list = 'unarchive_key_list_test.csv'
-#key_list = 'unarchive_key_list_2019_02_1.csv'
-#key_list = 'unarchive_key_list_2019_02_2.csv'
-#key_list = 'unarchive_key_list_2019_02_3.csv'
-#key_list = 'unarchive_key_list_2019_02_4.csv'
-#key_list = 'unarchive_key_list_2019_02_5.csv'
-#key_list = 'unarchive_key_list_2019_02_6.csv'
-#key_list = 'unarchive_key_list_2019_02_7.csv'
-#key_list = 'unarchive_key_list_2019_02_8.csv'
-#key_list = 'unarchive_key_list_2019_02_9.csv'
-#key_list = 'unarchive_key_list_2019_02_10.csv'
 #key_list = 'unarchive_key_list_2019_03.csv'
 #key_list = 'unarchive_key_list_2019_04.csv'
 #key_list = 'unarchive_key_list_2019_05.csv'
