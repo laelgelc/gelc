@@ -1,2 +1,2 @@
-# wsgelc
-Workspace for GELC projects
+# genrepogelc
+Generic repo for GELC projects
