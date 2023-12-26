@@ -1,2 +1,2 @@
-# awsemr
-Amazon EMR for GELC projects
+# wsgelc
+Workspace for GELC projects
