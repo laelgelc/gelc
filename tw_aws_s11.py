@@ -9,7 +9,7 @@ import time
 import datetime
 
 # Define the name of the CSV file containing the list of links
-links_list = 'tw_aws_links_list_2020_s11.csv'
+links_list = 'tw_aws_links_list_11.csv'
 
 # Define the name of the directory where the downloaded files will be stored
 output_directory = 'tw_aws_data'
