@@ -18,8 +18,35 @@ clear
 
 venv
 
-cd "$HOME"/my_env || { printf "cd failed, exiting\n" >&2; return 1; }
-git clone https://github.com/laelgelc/tw_aws.git # Update the git repository link accordingly
-cd "$HOME"/my_env/gelc || { printf "cd failed, exiting\n" >&2; return 1; }
-pip install -r env.req # Make sure the file 'env.req' contains the requirements of the environment
-#aws s3 cp s3://gelc/.env .env # Update the reference to the '.env' file accordingly
+aws s3 cp s3://gelc/env.req "$HOME"/my_env/
+pip install -r "$HOME"/my_env/env.req # Make sure the file 'env.req' contains the requirements of the environment
+
+mkdir "$HOME"/my_env/s1/
+git clone https://github.com/laelgelc/gelc.git "$HOME"/my_env/s1/ # Update the git repository link accordingly
+#aws s3 cp s3://gelc/.env "$HOME"/my_env/s1/.env # Update the reference to the '.env' file accordingly
+cd "$HOME"/my_env/s1/ || { printf "cd failed, exiting\n" >&2; return 1; }
+nohup python "$HOME"/my_env/s1/tw_aws_s1.py &
+
+mkdir "$HOME"/my_env/s2/
+git clone https://github.com/laelgelc/gelc.git "$HOME"/my_env/s2/ # Update the git repository link accordingly
+#aws s3 cp s3://gelc/.env "$HOME"/my_env/s2/.env # Update the reference to the '.env' file accordingly
+cd "$HOME"/my_env/s2/ || { printf "cd failed, exiting\n" >&2; return 1; }
+nohup python "$HOME"/my_env/s1/tw_aws_s2.py &
+
+mkdir "$HOME"/my_env/s3/
+git clone https://github.com/laelgelc/gelc.git "$HOME"/my_env/s3/ # Update the git repository link accordingly
+#aws s3 cp s3://gelc/.env "$HOME"/my_env/s3/.env # Update the reference to the '.env' file accordingly
+cd "$HOME"/my_env/s3/ || { printf "cd failed, exiting\n" >&2; return 1; }
+nohup python "$HOME"/my_env/s1/tw_aws_s3.py &
+
+mkdir "$HOME"/my_env/s4/
+git clone https://github.com/laelgelc/gelc.git "$HOME"/my_env/s4/ # Update the git repository link accordingly
+#aws s3 cp s3://gelc/.env "$HOME"/my_env/s4/.env # Update the reference to the '.env' file accordingly
+cd "$HOME"/my_env/s4/ || { printf "cd failed, exiting\n" >&2; return 1; }
+nohup python "$HOME"/my_env/s1/tw_aws_s4.py &
+
+mkdir "$HOME"/my_env/s5/
+git clone https://github.com/laelgelc/gelc.git "$HOME"/my_env/s5/ # Update the git repository link accordingly
+#aws s3 cp s3://gelc/.env "$HOME"/my_env/s5/.env # Update the reference to the '.env' file accordingly
+cd "$HOME"/my_env/s5/ || { printf "cd failed, exiting\n" >&2; return 1; }
+nohup python "$HOME"/my_env/s1/tw_aws_s5.py &
