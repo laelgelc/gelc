@@ -47,10 +47,10 @@ mkdir "$HOME"/my_env/s9/
 git clone https://github.com/laelgelc/gelc.git "$HOME"/my_env/s9/ # Update the git repository link accordingly
 #aws s3 cp s3://gelc/.env "$HOME"/my_env/s9/.env # Update the reference to the '.env' file accordingly
 cd "$HOME"/my_env/s9/ || { printf "cd failed, exiting\n" >&2; return 1; }
-#nohup python -u "$HOME"/my_env/s9/tw_aws_s9.py & # Uncomment as required
+nohup python -u "$HOME"/my_env/s9/tw_aws_s9.py & # Uncomment as required
 
 mkdir "$HOME"/my_env/s11/
 git clone https://github.com/laelgelc/gelc.git "$HOME"/my_env/s11/ # Update the git repository link accordingly
 #aws s3 cp s3://gelc/.env "$HOME"/my_env/s11/.env # Update the reference to the '.env' file accordingly
 cd "$HOME"/my_env/s11/ || { printf "cd failed, exiting\n" >&2; return 1; }
-#nohup python -u "$HOME"/my_env/s11/tw_aws_s11.py & # Uncomment as required
+nohup python -u "$HOME"/my_env/s11/tw_aws_s11.py & # Uncomment as required
