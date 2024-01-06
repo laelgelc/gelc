@@ -48,6 +48,9 @@ user_agent = utils.get_random_useragent()
 # Create a custom header with the user agent
 headers = {'User-Agent': user_agent}
 
+# Create a request_args dictionary with the headers
+request_args = {'headers': headers}
+
 # Iterate over each row in the DataFrame
 for index, row in df.iterrows():
     link = row['Links']
@@ -57,7 +60,7 @@ for index, row in df.iterrows():
         try:
             timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
             print(timestamp, ': Downloading ' + link)
-            obj = SmartDL(link, output_directory, threads=threads, headers=headers, progress_bar=False)
+            obj = SmartDL(link, output_directory, threads=threads, request_args=request_args, progress_bar=False)
             obj.start()
             break  # Break out of the while loop if the download is successful
         except Exception as e:
