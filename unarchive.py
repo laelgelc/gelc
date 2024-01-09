@@ -97,10 +97,14 @@ for index, row in df.iterrows():
     s3.download_file(source_bucket_name, file_key, input_file_path)
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(timestamp, ': Extracting ' + file_key)
-    
     if input_file_path.endswith('.tar') or input_file_path.endswith('.tar.gz'):
         with tarfile.open(input_file_path, 'r') as tar:
             tar.extractall(path=output_directory)
+    elif input_file_path.endswith('.zip'):
+        with zipfile.open(input_file_path, 'r') as zip:
+            zip.extractall(path=output_directory)
+    else:
+        print(f'Error: {input_file_path} is not a supported archive file.')
     # Iterate over the extracted files
     timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     print(timestamp, ': Extracting and transferring .bz2 files to S3 for ' + file_key)

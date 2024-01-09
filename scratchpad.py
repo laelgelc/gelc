@@ -22,3 +22,6 @@ def extract_archive(file_path):
 
 
 extract_archive('/path/to/archive.zip')
+
+
+tweets_spark_df = spark.read.option('recursiveFileLookup', 'true').json('s3://gelctweets/2019_01/')
