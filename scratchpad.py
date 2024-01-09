@@ -25,3 +25,16 @@ extract_archive('/path/to/archive.zip')
 
 
 tweets_spark_df = spark.read.option('recursiveFileLookup', 'true').json('s3://gelctweets/2019_01/')
+
+unarchive_key_list_2020_1.csv
+unarchive_key_list_2020_2.csv
+unarchive_key_list_2020_3.csv
+unarchive_key_list_2020_4.csv
+unarchive_key_list_2020_5.csv
+unarchive_key_list_2020_6.csv
+unarchive_key_list_2020_7.csv
+unarchive_key_list_2020_8.csv
+unarchive_key_list_2020_9.csv
+unarchive_key_list_2020_10.csv
+unarchive_key_list_2020_11.csv
+unarchive_key_list_2020_12.csv
