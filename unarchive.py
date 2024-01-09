@@ -101,7 +101,7 @@ for index, row in df.iterrows():
         with tarfile.open(input_file_path, 'r') as tar:
             tar.extractall(path=output_directory)
     elif input_file_path.endswith('.zip'):
-        with zipfile.open(input_file_path, 'r') as zip:
+        with zipfile.ZipFile(input_file_path, 'r') as zip:
             zip.extractall(path=output_directory)
     else:
         print(f'Error: {input_file_path} is not a supported archive file.')
