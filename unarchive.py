@@ -16,7 +16,8 @@ import datetime
 load_dotenv()  # This line brings all environment variables from '.env' into 'os.environ'
 
 # Define the name of the CSV file containing the list of S3 keys
-key_list = 'unarchive_key_list_test.csv'
+key_list = os.environ['KEY_LIST']
+#key_list = 'unarchive_key_list_test.csv'
 #key_list = 'unarchive_key_list_2011.csv'
 #key_list = 'unarchive_key_list_2012.csv'
 #key_list = 'unarchive_key_list_2013.csv'
