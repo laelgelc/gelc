@@ -11,6 +11,8 @@
 # Monitoring u2: clear && ps -ef | grep unarchive && echo '-s5-' && tail "$HOME"/my_env/s5/nohup.out && echo '-s6-' && tail "$HOME"/my_env/s6/nohup.out && echo '-s7-' && tail "$HOME"/my_env/s7/nohup.out && echo '-s8-' && tail "$HOME"/my_env/s8/nohup.out
 # Monitoring u3: clear && ps -ef | grep unarchive && echo '-s9-' && tail "$HOME"/my_env/s9/nohup.out && echo '-s10-' && tail "$HOME"/my_env/s10/nohup.out && echo '-s11-' && tail "$HOME"/my_env/s11/nohup.out && echo '-s12-' && tail "$HOME"/my_env/s12/nohup.out
 
+# Monitoring u1: clear && ps -ef | grep unarchive && echo '-s2-' && tail "$HOME"/my_env/s2/nohup.out && echo '-s11-' && tail "$HOME"/my_env/s11/nohup.out
+
 venv () {
     sudo apt install -y python3-pip
     sudo apt install -y python3-venv

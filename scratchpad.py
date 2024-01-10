@@ -59,5 +59,27 @@ tw_aws_links_list_14.csv
 tw_aws_links_list_15.csv
 
 
-twitter-stream-2020-11-15.zip
+twitter-stream-2020-11-15.zip: Check and decide if it is worth to redownload (server 11)
+Old output directory successfully removed.
+Output directory successfully created.
+Old output directory successfully removed.
+Output directory successfully created.
+2024-01-10 12:00:43 : Downloading twitter-stream-2020-11-15.zip
+2024-01-10 12:01:16 : Extracting twitter-stream-2020-11-15.zip
+2024-01-10 12:02:14 : Extracting and transferring .bz2 files to S3 for twitter-stream-2020-11-15.zip
+2024-01-10 12:02:15 : 44.json transferred
+<omitted>
+2024-01-10 12:15:37 : 44.json transferred
+Traceback (most recent call last):
+  File "/home/ubuntu/my_env/s11/unarchive_s11.py", line 117, in <module>
+    uncompressed_data = bz_file.read()
+  File "/usr/lib/python3.10/bz2.py", line 164, in read
+    return self._buffer.read(size)
+  File "/usr/lib/python3.10/_compression.py", line 118, in readall
+    while data := self.read(sys.maxsize):
+  File "/usr/lib/python3.10/_compression.py", line 99, in read
+    raise EOFError("Compressed file ended before the "
+EOFError: Compressed file ended before the end-of-stream marker was reached
+
+
 
