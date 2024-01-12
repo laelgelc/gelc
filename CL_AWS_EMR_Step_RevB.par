@@ -1,7 +1,3 @@
-2020_01
---data_source s3://gelctweets/2020_01/
---output_path s3://gelcawsemr/2020_01/filtered_tweets.jsonl
-
 2020_1
 --data_source s3://gelctweets/2020_1/
 --output_path s3://gelcawsemr/2020_1/filtered_tweets.jsonl
